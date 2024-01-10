@@ -10,7 +10,14 @@ const app = express()
 //server port number (will run on .env PORT when we deploy it to heroku and localhost:3000 when we run it locally)
 const PORT = process.env.PORT || 3000
 
+//set template engine
+app.set("view engine", "ejs")
+app.use(express.static("public"))
+
+
 //start the server
 app.listen(PORT, () => {
     console.log(`Server started on port ${PORT}`)
 })
+
+
