@@ -14,6 +14,12 @@ const PORT = process.env.PORT || 3000
 app.set("view engine", "ejs")
 app.use(express.static("public"))
 
+//needed to parse html data for POST request
+app.use(express.urlencoded({
+    extended: true
+}))
+app.use(express.json())
+
 
 //start the server
 app.listen(PORT, () => {
