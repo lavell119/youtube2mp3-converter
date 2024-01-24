@@ -19,5 +19,20 @@
         </form>
     </div>
 
+    <div class="botton-container">
+        <% if(typeof success != "undefined" && success) { %>
+            <div class="success">
+                <p><%= song-title %></p>
+                <a href="<%= song-link %>"><button id ="download-btn">DOWNLOAD</button></a>
+            </div>
+        <% } else if(typeof success != "undefined" && !success) { %>
+            <div class="error">
+                <p><%= message %></p>
+            </div>
+        <% } %>
+    </div>
+
+
+
 </body>
 </html>
