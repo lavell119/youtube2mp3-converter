@@ -24,8 +24,9 @@ app.get("/", (req, res) => {
     res.render("index")
 })
 
-app.post("/", (req, res) => {
-    
+app.post("/convert-mp3", async (req, res) => {
+    const videoId = req.body.videoID
+    console.log(videoId)
 })
 
 
